@@ -33,7 +33,7 @@ This guide describes the difficulty of merging a LVM snapshot into a EXPRESSCLUS
   Merging of snapshot <LVM snapshot> will occur on next activation of <data partition>
   ```
 
-## Test Procedures1
+## Test Procedures2
 1. Start a failover group on a primary server
 2. Shutdown a primary server, and then a failover group is started on secondary server
 3. Stop ECX services
