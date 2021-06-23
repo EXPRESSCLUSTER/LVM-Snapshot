@@ -42,5 +42,28 @@ An idea to be validated
    lvconvert --merge /dev/FOO/HOGE
    mount /dev/FOO/BAR /md
    ```
+
+<!--
+# pvcreate /dev/sdb2
+# vgcreate vg-ecmd /dev/sdb2
+# vgdisplay vg-ecmd	
+:
+  PE Size               4.00 MiB
+  Total PE              2559
+  Alloc PE / Size       0 / 0
+  Free  PE / Size       2559 / <10.00 GiB
+:
+# lvcreate --name lv-ecmd --size $((4*2559))MiB vg-ecmd
+
+# vgs -P --noheadings -o vg_attr,vg_name vg-ecmd
+# vgchange -an vg-ecmd
+# vgexport vg-ecmd
+
+# vgimport vg-ecmd
+# vgscan
+# vgchange -ay vg-ecmd
+-->
+
+
 ---
 2021.06.21 Miyamoto Kazuyuki
