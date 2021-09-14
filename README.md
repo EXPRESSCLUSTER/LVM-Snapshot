@@ -38,7 +38,6 @@ An idea to be validated
 6. Marge the snapshot on node-B
 
    ```
-   umount /md
    lvconvert --merge /dev/FOO/HOGE
    mount /dev/FOO/BAR /md
    ```
@@ -64,6 +63,6 @@ An idea to be validated
 # vgchange -ay vg-ecmd
 -->
 
+Note:
 
----
-2021.06.21 Miyamoto Kazuyuki
+This method requires custom processing to issue fsck and mount command for DP.
